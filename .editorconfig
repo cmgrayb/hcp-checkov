@@ -1,0 +1,35 @@
+# Configuration options: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = false
+insert_final_newline = false
+
+# Unix-style newlines with a newline ending every file
+[*.{js,jsx,ts,tsx,css,scss,html,md,json,yml,yaml}]
+end_of_line = lf
+insert_final_newline = true
+
+# YAML files allow long lines
+[*.{yml,yaml,yamllint}]
+max_line_length = off
+indent_size = 2
+
+# MarkDown files should have a newline at the end
+[*.md]
+insert_final_newline = true
+
+# Terraform files should have a newline at the end and use 2 spaces for indentation
+[*.{tf,hcl}]
+insert_final_newline = true
+indent_size = 2
+
+# JSON indentation should always be 4 spaces
+[*.json]
+indent_size = 4
