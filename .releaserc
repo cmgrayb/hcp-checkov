@@ -1,0 +1,23 @@
+{
+    "branches": [
+        {
+            "name": "release/v+([0-9]).+([0-9]).+([0-9])-rc+([0-9])",
+            "channel": "rc",
+            "prerelease": "rc"
+        },
+        "v+([0-9]).+([0-9]).+([0-9])",
+        "main",
+        "master"
+    ],
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        [
+            "@semantic-release/release-notes-generator",
+            {
+                "linkCompare": false
+            }
+        ],
+        "@semantic-release/changelog",
+        "@semantic-release/git"
+    ]
+}
